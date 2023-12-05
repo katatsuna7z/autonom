@@ -32,10 +32,8 @@ img_array = image.img_to_array(img)
 img_array = np.expand_dims(img_array, axis=0)
 img_array = preprocess_input(img_array)
 
-# Make predictions
 predictions = model.predict(img_array)
 
-# Decode and print the top-3 predicted classes
 decoded_predictions = decode_predictions(predictions, top=3)[0]
 print("Predictions:")
 for i, (imagenet_id, label, score) in enumerate(decoded_predictions):
