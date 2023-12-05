@@ -44,4 +44,3 @@ decoded_predictions = decode_predictions(predictions, top=3)[0]
 print("Predictions:")
 for i, (imagenet_id, label, score) in enumerate(decoded_predictions):
     print(f"{i + 1}: {label} ({score:.2f})")
-
